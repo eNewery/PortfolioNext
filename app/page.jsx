@@ -10,6 +10,7 @@ export default function Page() {
 const context = useContext(MiContexto)
   return (
     <main className="mainContainer">
+ 
     {context.content === "home" ? <Home/> : context.content === "bio" ? <Bio/> : context.content === "projects" ? <Projects/> : console.log("Algo ha fallado")}
     </main>
   )

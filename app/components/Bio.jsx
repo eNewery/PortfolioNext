@@ -4,6 +4,10 @@ import { MiContexto } from "./context";
 
 const Bio = () => {
   const context = useContext(MiContexto)
+  function contactPage() {
+    context.setPreviousContent(context.content)
+    context.setContent("contact")
+  }
   return (
     <div className="bioContainer">
       <link
@@ -15,7 +19,7 @@ const Bio = () => {
         <p>
 {context.textLanguage.map(item => item.bioPresentation)}
         </p>
-        <button>{context.textLanguage.map(item => item.bioPresentationBtn)}</button>
+        <button onClick={() => contactPage()}>{context.textLanguage.map(item => item.bioPresentationBtn)}</button>
       </section>
       <section className="sectionBio bioEducationSection">
         <h1>{context.textLanguage.map(item => item.bioEducation)}</h1>

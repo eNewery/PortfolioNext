@@ -26,9 +26,70 @@ right: 1em;
 background: none;
 border: none;
 color: white;
+border-radius: 50%;
+padding: 1em;
+cursor: pointer;
+}
+.selectedLanguage{
+background-color: white;
+color: black;
 }
 /* Language Btn */
 
+/* Contact Container */
+
+.contactContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contactFormContainer{
+display: flex;
+flex-direction:column;
+justify-content: center;
+position: absolute;
+top: 50%;
+bottom: 50%;
+}
+.contactTitle{
+text-align: center;
+border-bottom: 3px solid #d9d9d9;
+margin-bottom: 0.1em;
+}
+.returnButton{
+position: absolute;
+left: 4em;
+  border-radius: 0;
+border: 0;
+height: 36px;
+cursor:pointer;
+font-size: 24px;
+top: 1em;
+}
+.contactFormInput{
+width: 800px;
+padding: 1em;
+border: none;
+background: #d9d9d9;
+color: #0f0f0f;
+margin-bottom: 0.1em;
+outline: none;
+}
+.contactBtn{
+padding: 1em;
+background: #0f0f0f;
+color: #d9d9d9;
+border: none;
+transition:0.3s;
+cursor: pointer;
+}
+.contactBtn:hover{
+  color: #0f0f0f;
+  box-shadow: inset 0 3em 3em 3em #d9d9d9;
+  transition:0.3s;
+}
+/* Contact Container */
 
 
 /* Sidebar */
@@ -183,6 +244,7 @@ align-items: center;
 }
 .sectionBio ul li div p{
   margin-bottom: 1em;
+  width: 90%;
 }
 .bioInfoSection{
   gap: 1em;
@@ -364,8 +426,8 @@ background-size: cover;
 }
 .donhorneroImage{
 background: url(./components/images/projectPizzeria.png);
-width: 512px;
-height: 512px;
+width: 418px;
+height: 418px;
 background-size: cover;
 border-top-left-radius: 1em;
   border-top-right-radius: 1em;
@@ -400,7 +462,6 @@ gap: 10em;
 margin-top: 1em;
 }
 .projectLink{
-
   cursor: pointer;
 }
 .projectBarContainer > .selectedProject:first-child{
@@ -470,6 +531,17 @@ margin-top: 1em;
     width: 80%;
   }
 /* Bio Container 768 */ 
+
+/* Contact Container 768 */
+.contactFormInput{
+  width: 500px;
+  }
+.returnButton{
+  left: 0.5em;
+}
+
+/* Contact Container 768 */
+
 
   /* Sidebar 768 */
  .sideContainer{
@@ -546,9 +618,18 @@ bottom: 0;
   width: 350px;
   height: 260px;
 }
-}
-@media (max-height:568px) {
 .sectionSkills{
   margin-top: 3em;
 }
+/* Contact Container 568 */
+.contactFormInput{
+  width: 300px;
+  }
+/* Contact Container 568 */
+
+
 }
+
+
+
+

@@ -3,6 +3,7 @@ import React, { createContext, useState, useEffect } from "react";
 const MiContexto = createContext();
 const MiContextoProvider = ({ children }) => {
   const [content, setContent] = useState("home");
+  const [previousContent, setPreviousContent] = useState("")
   const [projectsTitle, setProjectsTitle] = useState("maybelline");
   const [projectsContent, setProjectsContent] = useState([]);
   const [icons, setIcons] = useState([]);
@@ -106,7 +107,7 @@ language === "ES" ? setTextLanguage(dataES) : setTextLanguage(dataEN)
           image3: "maybellineImage3",
           descriptionES:
             "Maybelline es un E-Commerce totalmente responsive creado a partir de la API Make-Up y, haciendo honor a la api, Maybelline. Un E-Commerce creado con Nextjs, utilizando librerias como Emailjs para las órdenes de compra. Una API sin dudas muy completa, y una aplicación aún más.",
-          descriptionEN: "",
+          descriptionEN: "Maybelline is a fully responsive E-Commerce created from the Make-Up API and, honoring the API, from Maybelline. An electronic commerce created with Nextjs, using libraries such as Emailjs for purchase orders. An API that is undoubtedly very complete, and an application even more so.",
             languages: "NEXT JS | CSS | MAKE UP API ",
           links: {
             ghub: "https://github.com/eNewery/MakeUpShop",
@@ -133,9 +134,10 @@ language === "ES" ? setTextLanguage(dataES) : setTextLanguage(dataEN)
         {
           title: "Slider",
           image: "sliderImage",
-          description:
+          descriptionES:
             "Slider Button, es un proyecto 100% comentado el cual tiene la mera intención de mostrar un botón de Slide totalmente funcional el cual puede ser reutilizado para cualquier ocasión que el cliente desee. En este caso, ha sido utilizado para mostrar mi información personal o medios de contacto, pero puede ser utilizado para cualquier interacción.",
-          languages: "NEXT JS | CSS",
+            descriptionEN:"Slider Button, is a 100% commented project which has the mere intention of showing a fully functional Slide button which can be reused for any occasion that the client wishes. In this case, it has been used to show my personal information or means of contact, but it can be used for any interaction.",
+            languages: "NEXT JS | CSS",
           links: {
             ghub: "https://github.com/eNewery/Slider-Button",
             repo: "https://slider-blond-beta.vercel.app/",
@@ -163,9 +165,10 @@ language === "ES" ? setTextLanguage(dataES) : setTextLanguage(dataEN)
           image: "donhorneroImage",
           image2: "donhorneroImage2",
           image3: "donhorneroImage3",
-          description:
+          descriptionES:
             "Pizzeria Don Hornero es un proyecto que parte por la idea de trabajar en equipo con otras personas para recoger algo de lo más cercano a una experiencia laboral. Fue realizado con un equipo que contaba con backend devs, qa testers y frontend devs. Fue realizado en Nextjs y tiene la intención de ser un menú de comida rápida que envía las órdenes de compra al gmail deseado gracias a Emailjs.",
-          languages: "NEXT JS | CSS | EMAIL JS",
+            descriptionEN:"Pizzeria Don Hornero is a project that starts from the idea of ​​working as a team with other people to gather something that is closest to a work experience. It was done with a team that included backend devs, qa testers and frontend devs. It was made in Nextjs and is intended to be a fast food menu that sends purchase orders to the desired gmail thanks to Emailjs.",
+            languages: "NEXT JS | CSS | EMAIL JS",
           links: {
             ghub: "https://github.com/eNewery/Pizzeria",
             repo: "https://pizzeria-don-hornero.vercel.app/",
@@ -193,9 +196,10 @@ language === "ES" ? setTextLanguage(dataES) : setTextLanguage(dataEN)
           image: "usersImage",
           image2: "usersImage2",
           image3: "usersImage3",
-          description:
+          descriptionES:
             "Do Users es una aplicación destinada a la creación de usuarios, dichos usuarios son guardados en firebase auth y tienen su propia base de datos, donde pueden guardar sus tareas y verlas cada vez que inicien sesión. Siempre estarán ahí. Un perfecto ejemplo de cómo podría hacer un administrador de productos para un E-Commerce.",
-          languages: "NEXT JS | CSS | FIREBASE | AUTH",
+            descriptionEN:"Do Users is an application for the creation of users, these users are saved in firebase auth and have their own database, where they can save their tasks and see them every time they log in. They will always be there. A perfect example of how a product manager for an E-Commerce could do.",
+            languages: "NEXT JS | CSS | FIREBASE | AUTH",
           links: {
             ghub: "https://github.com/eNewery/usersTest",
             repo: "https://do-tasks-psi.vercel.app/",
@@ -250,7 +254,9 @@ language === "ES" ? setTextLanguage(dataES) : setTextLanguage(dataEN)
         icons,
         language,
 setLanguage,
-textLanguage
+textLanguage,
+setPreviousContent,
+previousContent
       }}
     >
       {children}
